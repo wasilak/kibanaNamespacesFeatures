@@ -21,6 +21,7 @@ import (
 var kibanaAddress string
 var disabledFeatures []string
 var excludedSpaces []string
+var wg sync.WaitGroup
 
 // Space type
 type Space struct {
@@ -94,8 +95,7 @@ func updateSpace(kibanaAddress string, space Space, wg *sync.WaitGroup, spacesCh
 	spacesChannel <- spaceChange
 }
 
-func main() {
-
+func initParams() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage: %s [kibana address]\n", os.Args[0])
 		flag.PrintDefaults()
@@ -120,8 +120,11 @@ func main() {
 	kibanaAddress = viper.GetString("address")
 	excludedSpaces = viper.GetStringSlice("excludedSpaces")
 	disabledFeatures = viper.GetStringSlice("disabledFeatures")
+}
 
-	var wg sync.WaitGroup
+func main() {
+
+	initParams()
 
 	resp, err := http.Get(kibanaAddress + "/api/spaces/space")
 
