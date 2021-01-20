@@ -1,4 +1,4 @@
-module github.com/wasilak/kibanaNamespacesFeatures
+module github.com/wasilak/kibanaSpacesFeatures
 
 go 1.14
 
