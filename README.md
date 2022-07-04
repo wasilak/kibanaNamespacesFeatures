@@ -3,7 +3,7 @@ Kibana Spaces Features [![Maintainability](https://api.codeclimate.com/v1/badges
 
 Small app helping keeping features in Kibana spaces disabled/enabled in cases when Elasticsearch Security is not enabled.
 
-Installtion:
+Installation:
 
 ```go
 go get github.com/wasilak/kibanaSpacesFeatures
