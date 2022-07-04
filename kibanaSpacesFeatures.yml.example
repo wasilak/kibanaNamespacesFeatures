@@ -1,0 +1,8 @@
+---
+address: http://localhost:5601
+excludedSpaces:
+  - default
+disabledFeatures:
+  - dev_tools
+  - advancedSettings
+  - savedObjectsManagement
