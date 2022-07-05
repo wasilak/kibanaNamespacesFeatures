@@ -96,7 +96,10 @@ override.tf.json
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
 
-kibanaSpacesFeatures.yml
+**/kibanaSpacesFeatures.yml
 infrastructure
 src/rice-box.go
 src/pkged.go
+bin/*
+**/*.zip
+
