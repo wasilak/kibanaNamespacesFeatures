@@ -5,6 +5,7 @@ go 1.23
 require (
 	github.com/fatih/color v1.17.0
 	github.com/r3labs/diff/v2 v2.15.1
+	github.com/r3labs/diff/v3 v3.0.1
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.19.0
 )
